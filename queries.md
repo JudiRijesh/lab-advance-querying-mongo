@@ -77,4 +77,4 @@ db.Companies.find({"acquisition.acquired_month":{$lte:4}},{name:1,_id:0,acquisit
 
 ### 19. All the companies that have been founded between 2000 and 2010, but have not been acquired before 2011.
 
-db.Companies.find({$and:[{founded_year:{$gte:2000,$lte:2010}},{"acquisition.acquired_year":{$lt:2011}}]})
+db.Companies.find({$and:[{founded_year:{$gte:2000,$lte:2010}},{"acquisition.acquired_year":{$gt:2011}}]})
